@@ -3,214 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer</title>
+  <title>Document</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    /* Base Footer Styling */
+.site-footer {
+  width: 100%;
+  background-image: url(/Img/footer-bg.png);
+  padding: 50px 20px 40px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
 
-    body {
-      background-color: #f4eee8;
-      padding: 40px;
-    }
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-    /* Target by ID */
-    #main-footer {
-      position: relative;
-      background-color: #43210d;
-      color: #ffffff;
-      padding: 50px 60px 40px;
-      overflow: hidden;
-      border-radius: 4px;
-    }
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
 
-    #main-footer::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 45%;
-      background: url(/Img/footerbg.jpg);
-        background-size: cover;
-      pointer-events: none;
-    }
+/* Logo & Brand Column */
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    .footer-container {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
-      gap: 40px;
-    }
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 
-    #brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 26px;
-      font-weight: bold;
-      color: #ffffff;
-      text-decoration: none;
-    }
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
 
-    #brand-logo i {
-      font-size: 32px;
-    }
+.copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 50px;
+}
 
-    #copyright-text {
-      font-size: 13px;
-      color: #d1c7bd;
-      margin-top: 60px;
-    }
+/* Headings */
+.footer-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
-    .footer-column h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
+/* Quick Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    /* Links & Lists */
-    .quick-links ul, .contact-info ul {
-      list-style: none;
-    }
+.footer-links li {
+  margin-bottom: 12px;
+}
 
-    .quick-links li {
-      margin-bottom: 12px;
-    }
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
 
-    .quick-links a {
-      color: #d1c7bd;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.2s;
-    }
+.footer-links a:hover {
+  color: #ffffff;
+}
 
-    .quick-links a:hover {
-      color: #ffffff;
-    }
+/* Contact Info */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .contact-info li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 16px;
-      color: #d1c7bd;
-      font-size: 14px;
-      line-height: 1.4;
-    }
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
 
-    .contact-info i {
-      font-size: 18px;
-      color: #ffffff;
-      margin-top: 2px;
-    }
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
 
-    .social-links {
-      display: flex;
-      gap: 12px;
-    }
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
 
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      border: 1px solid #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 14px;
-      transition: background 0.2s, color 0.2s;
-    }
+.social-links a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
 
-    .social-icon:hover {
-      background-color: #ffffff;
-      color: #43210d;
-    }
-
-    @media (max-width: 900px) {
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
-    }
+.social-links a:hover {
+  background-color: #ffffff;
+  color: #30160a;
+}
   </style>
 </head>
 <body>
-
-  <!-- ID added to main footer element -->
-  <footer id="main-footer">
-    <div class="footer-container">
-      
-      <!-- Brand & Copyright -->
-      <div id="footer-brand" class="footer-brand">
-        <a href="#" id="brand-logo">
-          <i class="fa-solid fa-house"></i>
-          <span>Home Hunt KH</span>
-        </a>
-        <p id="copyright-text">@ 2026 home hunt kh.com All right served</p>
+  
+  <footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Brand / Logo Section -->
+    <div class="footer-col brand-col">
+      <div class="footer-logo">
+        <img src="logo-icon.png" alt="Home Hunt KH Logo" class="logo-img">
+        <span class="logo-text">Home Hunt KH</span>
       </div>
-
-      <!-- Quick Links Column -->
-      <div id="quick-links-section" class="footer-column quick-links">
-        <h3>Quick link</h3>
-        <ul>
-          <li><a id="link-home" href="#home">Home</a></li>
-          <li><a id="link-listing" href="#listing">Listing</a></li>
-          <li><a id="link-property-detail" href="#property-detail">Property Detail</a></li>
-          <li><a id="link-book-visit" href="#book-visit">Book visit</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Us Column -->
-      <div id="contact-us-section" class="footer-column contact-info">
-        <h3>Contact Us</h3>
-        <ul>
-          <li id="contact-phone">
-            <i class="fa-solid fa-phone"></i>
-            <span>012 345 678</span>
-          </li>
-          <li id="contact-email">
-            <i class="fa-solid fa-envelope"></i>
-            <span>hello@homehuntkh.example</span>
-          </li>
-          <li id="contact-address">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Street 315, Boeung Kak 2,<br>Toul Kork, Phnom Penh</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Follow Us Column -->
-      <div id="follow-us-section" class="footer-column">
-        <h3>Follow Us</h3>
-        <div id="social-media-links" class="social-links">
-          <a id="social-facebook" href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-          <a id="social-instagram" href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-          <a id="social-youtube" href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-          <a id="social-x" href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-
+      <p class="copyright">@ 2026 home hunt kh.com All right served</p>
     </div>
-  </footer>
 
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Quick link</h4>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Listing</a></li>
+        <li><a href="#">Property Detail</a></li>
+        <li><a href="#">Book visit</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact Us</h4>
+      <ul class="contact-list">
+        <li>
+          <img src="phone-icon.svg" alt="Phone" class="contact-icon">
+          <span>012 345 678</span>
+        </li>
+        <li>
+          <img src="mail-icon.svg" alt="Email" class="contact-icon">
+          <span>hello@homehuntkh.example</span>
+        </li>
+        <li>
+          <img src="location-icon.svg" alt="Location" class="contact-icon">
+          <span>Street 315, Boeung Kak 2,<br>Toul Kork, Phnom Penh</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Follow Us / Social Links -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Follow Us</h4>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Include FontAwesome for Social Icons (optional) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </body>
 </html>
