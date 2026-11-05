@@ -431,3 +431,123 @@ h2 {
     .brand { min-height: 0; }
     .brand__copy { margin-top: 12px; }
   }
+
+/* =========================================================
+   EXTRA RESPONSIVE RULES
+   Desktop (above 1100px) is untouched, so the original
+   design looks exactly the same there.
+   ========================================================= */
+
+img,
+video,
+svg {
+    max-width: 100%;
+}
+
+/* Small laptops / large tablets */
+@media (max-width: 1100px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        margin-left: 20px;
+        font-size: 17px;
+    }
+    .main-layout {
+        gap: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .room-list {
+        gap: 12px;
+    }
+}
+
+/* Tablets: sidebar moves under the main content */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+    }
+    nav a {
+        margin-left: 0;
+        font-size: 16px;
+    }
+    .main-layout {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .recommend-title {
+        margin-top: 40px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .logo-img {
+        height: 42px;
+    }
+    nav a {
+        font-size: 15px;
+    }
+    .main-layout {
+        margin-left: 5px;
+        margin-right: 5px;
+        gap: 20px;
+    }
+    .main-image {
+        height: 200px;
+    }
+    .thumbnail-gallery {
+        gap: 6px;
+    }
+    .thumbnail-gallery img {
+        height: 55px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .amenities-title {
+        margin: 30px 0 20px;
+    }
+    .room-list {
+        grid-template-columns: 1fr;
+    }
+    .room-card1 img {
+        height: 150px;
+    }
+    .booking-card,
+    .details-card,
+    .why-card {
+        padding: 15px;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    .col h3,
+    .links a {
+        white-space: normal;
+    }
+}
