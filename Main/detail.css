@@ -149,6 +149,11 @@ h2 {
     margin-top: 12px;
 }
 
+.btn:hover {
+    background: #765035;
+}
+
+
 /* Sidebar */
 
 .sidebar {
@@ -188,6 +193,10 @@ h2 {
     font-size: 12px;
     margin-bottom: 12px;
     color: grey;
+}
+
+.booking-card a{
+    text-decoration: none;
 }
 
 .booking-price {
