@@ -476,13 +476,306 @@ p {
 
   :focus-visible { outline: 2px solid #ffd9a8; outline-offset: 3px; }
 
-  /* Responsive */
-  @media (max-width: 960px) {
-    .footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; }
+
+/* =====================================================================
+   RESPONSIVE STYLES
+   Everything above is the original design (unchanged, so desktop looks
+   exactly the same). The rules below only apply on smaller screens.
+   ===================================================================== */
+
+/* Prevent images from ever overflowing and sideways scrolling */
+img {
+  max-width: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Large tablets / small laptops (max 1100px) ---------- */
+@media (max-width: 1100px) {
+
+  /* Section 2: smaller gap between room cards */
+  .room-container {
+    gap: 40px;
   }
-  @media (max-width: 520px) {
-    .footer { padding: 24px 20px; }
-    .footer__inner { grid-template-columns: 1fr; gap: 24px; }
-    .brand { min-height: 0; }
-    .brand__copy { margin-top: 12px; }
+
+  /* Section 3: stop forcing the wide left box + big margin */
+  .left {
+    margin-right: 0;
+    width: 100%;
+    max-width: 530px;
   }
+
+  .right {
+    max-width: 100%;
+    flex: 1 1 360px;
+  }
+
+  /* Section 5: smaller side margins */
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  /* Footer: 2 x 2 grid */
+  .footer__inner {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+  }
+}
+
+/* ---------- Tablets (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Header: logo on top, links below */
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  /* Hero */
+  #section1 {
+    height: auto;
+    min-height: 400px;
+    padding: 50px 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .title-1 {
+    font-size: 32px;
+  }
+
+  /* Section 2 */
+  #section2 {
+    padding: 30px 25px;
+  }
+
+  .title-2 h1 {
+    font-size: 34px;
+  }
+
+  .room-container {
+    gap: 25px;
+  }
+
+  /* Section 3 */
+  #section3 {
+    padding: 40px 25px;
+    gap: 30px;
+  }
+
+  .left {
+    height: auto;
+    min-height: 200px;
+    max-width: 100%;
+  }
+
+  .right h1 {
+    font-size: 28px;
+  }
+
+  /* Section 4: let the banner grow with its content */
+  .room-5 {
+    height: auto;
+    padding: 40px 25px;
+  }
+
+  .room-5 h1 {
+    font-size: 32px;
+  }
+
+  .img-5 {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Section 5 */
+  .text-5 h1 {
+    font-size: 30px;
+    margin-left: 25px;
+  }
+
+  .text-5 p {
+    margin-left: 25px;
+  }
+
+  .container {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    width: auto;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 28px 22px;
+  }
+}
+
+/* ---------- Phones (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  /* Header */
+  header {
+    padding: 10px 14px;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  nav {
+    gap: 8px 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* Hero */
+  #section1 {
+    min-height: 340px;
+    padding: 40px 20px;
+  }
+
+  .title-1 {
+    font-size: 26px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+
+  .button {
+    padding: 10px 22px;
+  }
+
+  /* Section 2: one card per row, full width */
+  #section2 {
+    padding: 25px 15px;
+  }
+
+  .title-2 h1 {
+    font-size: 28px;
+  }
+
+  .room-container {
+    gap: 20px;
+  }
+
+  .room-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Section 3 */
+  #section3 {
+    padding: 30px 15px;
+  }
+
+  .left img {
+    width: 110px;
+  }
+
+  .right h1 {
+    font-size: 24px;
+  }
+
+  /* Features stack vertically */
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Section 4 */
+  .room-5 {
+    padding: 30px 15px;
+  }
+
+  .room-5 h1 {
+    font-size: 26px;
+  }
+
+  .img-5 {
+    justify-content: center;
+  }
+
+  .img-5 img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* Section 5 */
+  .text-5 h1 {
+    font-size: 26px;
+    margin-left: 15px;
+  }
+
+  .text-5 p {
+    margin-left: 15px;
+  }
+
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Footer: single column */
+  .footer {
+    padding: 26px 18px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .brand {
+    min-height: 0;
+  }
+
+  .brand__copy {
+    margin-top: 16px;
+  }
+
+  .links a,
+  .col h3 {
+    white-space: normal;
+  }
+}
