@@ -54,7 +54,7 @@ h2 {
 .description {
     font-size: 13px;
     line-height: 1.6;
-    color: #806b55;
+    color: grey;
 }
 
 /* Amenities */
@@ -77,8 +77,16 @@ h2 {
 }
 
 .amenity-icon {
-    font-size: 25px;
-    margin-bottom: 12px;
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background: #593820;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 3px;
 }
 
 /* Recommended rooms */
@@ -211,7 +219,16 @@ h2 {
 }
 
 .why-icon {
-    font-size: 25px;
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background: #593820;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 3px;
 }
 
 .why-item h4 {
