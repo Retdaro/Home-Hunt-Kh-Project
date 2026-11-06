@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f2e9;
+    color: #593820;
+}
+/* ah nis header */
+header {
+  background-color: #5A3615; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+
+    /* ah nis logo */
+    .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  }
+
+.logo-img {
+  height: 50px; 
+  width: auto;  
+  }
+
+nav {
+  display: flex;                     /* under line nv nav*/
+  gap: 30px; 
+  }
+nav a {
+  color: #f3e8df;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left: 35px;
+  }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: #d4a373; 
+  transition: width 0.3s ease;
+  }
+nav a:hover::after {
+  width: 100%;
+  }
+nav a.active::after {
+  width: 100%;
+  }
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.05fr;
+    gap: 45px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+/* Header */
+.hero {
+    height: 200px;
+    background: url("/Img/heropic.jpg") center/cover no-repeat;
+    padding: 40px;
+}
+
+.hero p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-left: 2px;
+}
+
+.hero h1 {
+    font-size: 25px;
+}
+
+/* Main */
+#book {
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    gap: 25px;
+}
+
+/* Room card */
+.room-card {
+    border: 1px solid #e5ddd0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.room-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.room-card h2 {
+    border-radius: 5px;
+}
+
+.room-card h2 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.room-card p {
+    font-size: 12px;
+    margin-bottom: 12px;
+    color: grey;
+}
+.total-price{
+    font-size: 12px;
+}
+
+.room-card hr {
+    border: 0;
+    border-top: 1px solid #e5ddd0;
+    margin-bottom: 12px;
+}
+
+.room-card h1 {
+    font-size: 27px;
+    margin-top: -10px;
+}
+
+.room-card span {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+/* Contact */
+.contact1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact1 h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.contact1 a {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background: #593820;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+
+/* Form */
+.form-card {
+    border: 1px solid #e5ddd0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.form-card h2 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.form-card > p {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e8e2d9;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+form input {
+    height: 42px;
+}
+
+form textarea {
+    height: 105px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #593820;
+}
+
+form hr {
+    border: 0;
+    border-top: 1px solid #e5ddd0;
+    margin: 0 0 20px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    height: 43px;
+    border: none;
+    border-radius: 5px;
+    background: #593820;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #765035;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    #book {
+        grid-template-columns: 1fr;
+    }
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+/* Footer*/
+
+:root {
+    --page-bg: #f6efe6;
+    --footer-bg: #4f2a14;
+    --text: #ffffff;
+    --text-soft: #f1e3d3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans", system-ui, sans-serif;
+    background: var(--page-bg);
+    padding: 20px;
+  }
+
+  .footer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 32px 36px;
+    color: var(--text);
+    border-radius: 12px;
+    background: var(--footer-bg) url("/Img/footerbg.jpg") center / cover no-repeat;
+  }
+
+  .footer__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 32px 48px;
+    align-items: start;
+  }
+
+  /* Brand */
+  .brand { display: flex; flex-direction: column; justify-content: space-between; min-height: 120px; }
+  .brand__logo { display: inline-block; line-height: 0; }
+  .brand__logo img { height: 36px; width: auto; max-width: 100%; display: block; }
+  .brand__copy { margin-top: 48px; font-size: 11px; color: var(--text-soft); }
+
+  /* Columns */
+  .col h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; white-space: nowrap; }
+
+  .links { list-style: none; display: grid; gap: 10px; }
+  .links a { white-space: nowrap; color: var(--text); text-decoration: none; font-size: 15px; transition: opacity .2s; }
+  .links a:hover, .links a:focus-visible { opacity: .7; text-decoration: underline; }
+
+  .contact { list-style: none; display: grid; gap: 12px; }
+  .contact li { display: flex; align-items: flex-start; gap: 10px; font-family: "Noto Serif", serif; font-size: 11px; line-height: 1.5; }
+  .contact svg { flex: none; width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .contact svg.filled { fill: #fff; stroke: none; }
+  .contact a { color: inherit; text-decoration: none; }
+
+  /* Social */
+  .social { display: flex; gap: 8px; }
+  .social a {
+    width: 22px; height: 22px;
+    display: grid; place-items: center;
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 50%;
+    color: #fff;
+    transition: background .2s, color .2s;
+  }
+  .social a:hover, .social a:focus-visible { background: #fff; color: var(--footer-bg); }
+  .social svg { width: 11px; height: 11px; fill: currentColor; }
+
+  :focus-visible { outline: 2px solid #ffd9a8; outline-offset: 3px; }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; }
+  }
+  @media (max-width: 520px) {
+    .footer { padding: 24px 20px; }
+    .footer__inner { grid-template-columns: 1fr; gap: 24px; }
+    .brand { min-height: 0; }
+    .brand__copy { margin-top: 12px; }
+  }
+
+/* =========================================================
+   EXTRA RESPONSIVE RULES
+   Desktop (above 1100px) is untouched, so the original
+   design looks exactly the same there.
+   ========================================================= */
+
+img,
+video,
+svg {
+    max-width: 100%;
+}
+
+/* Small laptops / large tablets */
+@media (max-width: 1100px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        margin-left: 20px;
+        font-size: 17px;
+    }
+    .main-layout {
+        gap: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .form-card {
+        margin-right: 0;
+    }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+    }
+    nav a {
+        margin-left: 0;
+        font-size: 16px;
+    }
+    .hero {
+        height: auto;
+        min-height: 200px;
+        padding: 30px 25px;
+    }
+    .hero p {
+        margin-top: 15px;
+    }
+    #book {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .logo-img {
+        height: 42px;
+    }
+    nav a {
+        font-size: 15px;
+    }
+    .main-layout {
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 20px;
+    }
+    .hero {
+        padding: 25px 18px;
+    }
+    .hero h1 {
+        font-size: 22px;
+    }
+    .hero p {
+        letter-spacing: 2px;
+    }
+    #book {
+        padding: 0 8px;
+    }
+    .form-card,
+    .room-card {
+        padding: 15px;
+    }
+    form input,
+    form textarea {
+        font-size: 16px; /* stops iOS zooming into inputs */
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    .col h3,
+    .links a {
+        white-space: normal;
+    }
+}

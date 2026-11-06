@@ -1,0 +1,668 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+  background-color: #fdfbf7;
+  }
+
+    /* ah nis header */
+header {
+  background-color: #5A3615; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+
+    /* ah nis logo */
+    .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  }
+
+.logo-img {
+  height: 50px; 
+  width: auto;  
+  }
+
+nav {
+  display: flex;                     /* under line nv nav*/
+  gap: 30px; 
+  }
+nav a {
+  color: #f3e8df;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left: 35px;
+  }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: #d4a373; 
+  transition: width 0.3s ease;
+  }
+nav a:hover::after {
+  width: 100%;
+  }
+nav a.active::after {
+  width: 100%;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Search Section */
+.search-section {
+    width: 100%;
+    min-height: 200px;
+    padding: 50px 4% 0;
+    position: relative;
+}
+
+/* Background Image */
+.search-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+
+    background-image: url("/Img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main Search Box */
+.search-box {
+    width: 100%;
+    max-width: 1200px;
+    height: 150px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    background-color: #f5f5f5;
+    border: 1px solid #5A3615;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Brown Header */
+.search-header {
+    height: 56px;
+    background-color: #603719;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rent-btn {
+    background-color: #f5f5f5;
+    color: #603719;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-header p {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Search Content */
+.search-content {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 20px;
+}
+
+.search-content input {
+    width: 255px;
+    height: 39px;
+    padding: 10px 12px;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: transparent;
+
+    font-size: 13px;
+    font-weight: bold;
+    outline: none;
+}
+
+.search-content select {
+    width: 115px;
+    height: 39px;
+    padding: 8px;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: transparent;
+
+    font-weight: bold;
+}
+
+/* Search Button */
+.search-btn {
+    width: 115px;
+    height: 39px;
+
+    background-color: #603719;
+    color: white;
+
+    border: 1px solid #3f260f;
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search-icon::after {
+    content: "";
+    width: 5px;
+    height: 1.5px;
+    background: white;
+    position: absolute;
+    right: -4px;
+    bottom: -2px;
+    transform: rotate(45deg);
+}
+
+/* Phone Responsive */
+@media (max-width: 700px) {
+
+    .search-section {
+        padding: 30px 15px 0;
+    }
+
+    .search-section::before {
+        height: 160px;
+    }
+
+    .search-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search-content input,
+    .search-content select,
+    .search-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* Main Layout */
+.listing-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Filter Sidebar */
+.filter-box {
+    width: 220px;
+    height: fit-content;
+    border: 1px solid #9b8a79;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 30px;
+}
+
+.filter-box h3 {
+    font-size: 15px;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #9b8a79;
+}
+
+.filter-content {
+    padding: 12px;
+}
+
+.filter-content h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.filter-content label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.filter-content input[type="checkbox"] {
+    accent-color: #7A4A1E;
+    margin-right: 5px;
+}
+
+.filter-content hr {
+    border: none;
+    border-top: 1px solid #c9b9a8;
+    margin: 15px 0;
+}
+
+.filter-content p {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.filter-content input[type="range"] {
+    width: 100%;
+    accent-color: #7A4A1E;
+}
+
+.filter-btn {
+    width: 100%;
+    background-color: #5A3615;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 9px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+/* Rooms Section */
+.rooms {
+    flex: 1;
+    min-width: 0;
+    margin-top: 30px;
+}
+
+
+/* Room Grid */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Room Card */
+.room-card {
+    background-color: #F8F2EC;
+    border: 1px solid #dfd3c6;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Room Image */
+.room-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Room Information */
+.room-info {
+    padding: 12px;
+}
+
+.room-info h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.room-info p {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.room-info .price {
+    font-weight: bold;
+    color: #7A4A1E;
+}
+
+.room-info .price span {
+    color: #777;
+    font-weight: normal;
+}
+
+/* View Details Button */
+.room-info button {
+    width: 100%;
+    padding: 9px;
+    background-color: #5A3615;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.room-info button:hover {
+    background-color: #7A4A1E;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .listing-container {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .filter-box {
+        width: 190px;
+    }
+
+    .room-grid {
+        gap: 10px;
+    }
+
+    .room-card img {
+        height: 130px;
+    }
+}
+
+/* Phone */
+@media (max-width: 700px) {
+
+    .listing-container {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .filter-box {
+        width: 100%;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card img {
+        height: 190px;
+    }
+
+}
+
+
+/* Footer*/
+
+ :root {
+    --page-bg: #f6efe6;
+    --footer-bg: #4f2a14;
+    --text: #ffffff;
+    --text-soft: #f1e3d3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans", system-ui, sans-serif;
+    background: var(--page-bg);
+    padding: 20px;
+  }
+
+  .footer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 32px 36px;
+    color: var(--text);
+    border-radius: 12px;
+    background: var(--footer-bg) url("/Img/footerbg.jpg") center / cover no-repeat;
+  }
+
+  .footer__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 32px 48px;
+    align-items: start;
+  }
+
+  /* Brand */
+  .brand { display: flex; flex-direction: column; justify-content: space-between; min-height: 120px; }
+  .brand__logo { display: inline-block; line-height: 0; }
+  .brand__logo img { height: 36px; width: auto; max-width: 100%; display: block; }
+  .brand__copy { margin-top: 48px; font-size: 11px; color: var(--text-soft); }
+
+  /* Columns */
+  .col h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; white-space: nowrap; }
+
+  .links { list-style: none; display: grid; gap: 10px; }
+  .links a { white-space: nowrap; color: var(--text); text-decoration: none; font-size: 15px; transition: opacity .2s; }
+  .links a:hover, .links a:focus-visible { opacity: .7; text-decoration: underline; }
+
+  .contact { list-style: none; display: grid; gap: 12px; }
+  .contact li { display: flex; align-items: flex-start; gap: 10px; font-family: "Noto Serif", serif; font-size: 11px; line-height: 1.5; }
+  .contact svg { flex: none; width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .contact svg.filled { fill: #fff; stroke: none; }
+  .contact a { color: inherit; text-decoration: none; }
+
+  /* Social */
+  .social { display: flex; gap: 8px; }
+  .social a {
+    width: 22px; height: 22px;
+    display: grid; place-items: center;
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 50%;
+    color: #fff;
+    transition: background .2s, color .2s;
+  }
+  .social a:hover, .social a:focus-visible { background: #fff; color: var(--footer-bg); }
+  .social svg { width: 11px; height: 11px; fill: currentColor; }
+
+  :focus-visible { outline: 2px solid #ffd9a8; outline-offset: 3px; }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; }
+  }
+  @media (max-width: 520px) {
+    .footer { padding: 24px 20px; }
+    .footer__inner { grid-template-columns: 1fr; gap: 24px; }
+    .brand { min-height: 0; }
+    .brand__copy { margin-top: 12px; }
+  }
+
+
+/* =====================================================================
+   ADDITIONAL RESPONSIVE STYLES
+   Everything above is your original code, unchanged. The rules below
+   fill the gaps (header, search box height, tablet search wrapping)
+   and only apply on smaller screens, so the desktop design is the same.
+   ===================================================================== */
+
+/* Images never overflow, and no sideways scrolling */
+img {
+  max-width: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Tablets and below (max 900px) ---------- */
+@media (max-width: 900px) {
+
+  /* Search box grows with its content instead of a fixed 150px */
+  .search-box {
+    height: auto;
+  }
+
+  /* Let the inputs wrap instead of overflowing the box */
+  .search-content {
+    flex-wrap: wrap;
+  }
+
+  .search-content input {
+    flex: 1 1 220px;
+    width: auto;
+    min-width: 0;
+  }
+}
+
+/* ---------- Tablets (max 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Header: logo on top, links below */
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  /* Footer spacing */
+  .footer {
+    padding: 28px 24px;
+  }
+}
+
+/* ---------- Phones (max 700px) ---------- */
+@media (max-width: 700px) {
+
+  /* Fixes content being clipped: the search box was locked to 150px,
+     but the stacked inputs on phones are much taller than that */
+  .search-box {
+    height: auto;
+  }
+
+  /* Full width when stacked (overrides the flex-basis set above) */
+  .search-content input {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .search-header {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .search-header p {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .rent-btn {
+    padding: 8px 14px;
+    white-space: nowrap;
+  }
+
+  /* Filter and room list sit directly under each other */
+  .filter-box,
+  .rooms {
+    margin-top: 15px;
+  }
+}
+
+/* ---------- Small phones (max 480px) ---------- */
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px 14px;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  nav {
+    gap: 8px 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .search-section {
+    padding: 25px 10px 0;
+  }
+
+  .search-content {
+    padding: 15px 12px;
+  }
+
+  .listing-container {
+    padding: 10px 0;
+  }
+
+  .room-card img {
+    height: 170px;
+  }
+
+  /* Footer text may wrap instead of overflowing */
+  .links a,
+  .col h3 {
+    white-space: normal;
+  }
+}
